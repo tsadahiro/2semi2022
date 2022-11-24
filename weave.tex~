@@ -1,0 +1,15 @@
+\documentclass[lualatex,14pt,ja=standard]{bxjsarticle}
+
+\usepackage{tikz,pgf}
+
+\begin{document}
+
+\begin{tikzpicture}
+\foreach \x in {0,...7} {
+\foreach \y in {0,...7} {
+ \draw[fill=red] ({\x},{\y}) --  ++(1,0) -- ++(0,-1) -- ++ (-1,0) -- cycle;
+}
+}
+\end{tikzpicture}
+
+\end{document}

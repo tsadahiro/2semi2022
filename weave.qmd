@@ -1,0 +1,190 @@
+---
+title: "8.1 織り"
+format: revealjs
+date: 2022.11.24
+author: 担当：貞廣泰造
+---
+
+## 織り機
+
+<img src="https://www.kyoto-art.ac.jp/t-blog/wp-content/uploads/2018/10/66e091bc2d19932de79e174ad215915d-700x1056.jpg?v=1"></img>
+
+https://www.kyoto-art.ac.jp/t-blog/wp-content/uploads/2018/10/66e091bc2d19932de79e174ad215915d-700x1056.jpg
+
+<a href="https://www.google.com/search?q=%E6%A9%9F%E7%B9%94%E3%82%8A&source=lnms&tbm=isch&sa=X&ved=2ahUKEwiet7KyvMX7AhUFGYgKHfh9BEoQ_AUoAXoECAEQAw&biw=1920&bih=948&dpr=1#imgrc=flRGNJowOhaZRM"> google </a>
+
+## 織り機の仕組みの概要
+
+* 縦糸を通した**綜絖**と呼ばれる部品と**踏み木**と呼ばれる
+  部品が繋がっている。
+
+* 踏み木は一般に複数あり、踏み機を踏むとそれにつながる綜絖
+  が上下に動き上側と下側の２部に別れ、その間に横糸を通して
+  織りものが織り上がっていく。
+
+## Youtube
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/OA6W-FHMeJo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## 組織図
+
+<link rel="stylesheet" type="text/css" href="https://tikzjax.com/v1/fonts.css">
+<script src="https://tikzjax.com/v1/tikzjax.js"></script>
+
+<script type="text/tikz">
+\begin{tikzpicture}[scale=1.2]
+\foreach \x in {0,...,3} {
+\foreach \y in {0,...,3} {
+ \draw[fill=red] ({\x},{\y}) --  ++(1,0) -- ++(0,-1) -- ++ (-1,0) -- cycle;
+ \draw[fill=white] ({\x+4},{\y-4}) --  ++(1,0) -- ++(0,-1) -- ++ (-1,0) -- cycle;
+}
+}
+\foreach \x in {0,2} {
+\foreach \y in {0,2} {
+ \draw[fill=red] ({\x+4},{\y+1}) --  ++(1,0) -- ++(0,-1) -- ++ (-1,0) -- cycle;
+ \draw[fill=red] ({\x+4+1},{\y+1-1}) --  ++(1,0) -- ++(0,-1) -- ++ (-1,0) -- cycle;
+ \draw[fill=red] ({\x+1},{\y+1-4}) --  ++(1,0) -- ++(0,-1) -- ++ (-1,0) -- cycle;
+ \draw[fill=red] ({\x},{\y+1-5}) --  ++(1,0) -- ++(0,-1) -- ++ (-1,0) -- cycle;
+}
+}
+\foreach \y in {0,2,4,6}{
+ \draw[fill=black] ({8},{\y-3}) --  ++(1,0) -- ++(0,-1) -- ++ (-1,0) -- cycle;
+ \draw[fill=black] ({9},{\y-4}) --  ++(1,0) -- ++(0,-1) -- ++ (-1,0) -- cycle;
+ \draw[fill=black] ({\y+1},-5) --  ++(1,0) -- ++(0,-1) -- ++ (-1,0) -- cycle;
+ \draw[fill=black] ({\y},-6) --  ++(1,0) -- ++(0,-1) -- ++ (-1,0) -- cycle;
+}
+ \draw[fill=black] (9,-5) --  ++(1,0) -- ++(0,-1) -- ++ (-1,0) -- cycle;
+ \draw[fill=black] (8,-6) --  ++(1,0) -- ++(0,-1) -- ++ (-1,0) -- cycle;
+	
+\foreach \y in {0,1,2,3}{
+ \draw[fill=red] ({10},{-\y+3}) --  ++(2,0) -- ++(0,-1) -- ++ (-2,0) -- cycle;
+ \draw[fill=white] ({10},{-\y-1}) --  ++(2,0) -- ++(0,-1) -- ++ (-2,0) -- cycle;
+}
+
+\foreach \x in {0,1,2,3}{
+ \draw[fill=red] ({\x},-7) --  ++(1,0) -- ++(0,-2) -- ++ (-1,0) -- cycle;
+ \draw[fill=white] ({\x+4},-7) --  ++(1,0) -- ++(0,-2) -- ++ (-1,0) -- cycle;
+}
+
+\draw[line width=1] (0,3) -- ++(10,0) -- ++(0,-10) -- ++(-10,0) -- cycle;
+\draw[purple, line width=2] (0,3) -- ++(8,0) -- ++(0,-8) -- ++(-8,0) -- cycle;
+\draw[black, line width=2] (8,3) -- ++(2,0) -- ++(0,-8) -- ++(-2,0) -- cycle;
+\draw[black, line width=2] (0,-5) -- ++(8,0) -- ++(0,-2) -- ++(-8,0) -- cycle;
+
+\end{tikzpicture}
+</script>
+
+## 組織図
+
+
+<script type="text/tikz">
+\begin{tikzpicture}[scale=1.2]
+\foreach \x in {0,...,3} {
+\foreach \y in {0,...,3} {
+ \draw[fill=red] ({\x},{\y}) --  ++(1,0) -- ++(0,-1) -- ++ (-1,0) -- cycle;
+ \draw[fill=white] ({\x+4},{\y-4}) --  ++(1,0) -- ++(0,-1) -- ++ (-1,0) -- cycle;
+}
+}
+\foreach \x in {0,2} {
+\foreach \y in {0,2} {
+ \draw[fill=red] ({\x+4},{\y+1}) --  ++(1,0) -- ++(0,-1) -- ++ (-1,0) -- cycle;
+ \draw[fill=red] ({\x+4+1},{\y+1-1}) --  ++(1,0) -- ++(0,-1) -- ++ (-1,0) -- cycle;
+ \draw[fill=red] ({\x+1},{\y+1-4}) --  ++(1,0) -- ++(0,-1) -- ++ (-1,0) -- cycle;
+ \draw[fill=red] ({\x},{\y+1-5}) --  ++(1,0) -- ++(0,-1) -- ++ (-1,0) -- cycle;
+}
+}
+\foreach \y in {0,2,4,6}{
+ \draw[fill=black] ({8},{\y-3}) --  ++(1,0) -- ++(0,-1) -- ++ (-1,0) -- cycle;
+ \draw[fill=black] ({9},{\y-4}) --  ++(1,0) -- ++(0,-1) -- ++ (-1,0) -- cycle;
+ \draw[fill=black] ({\y+1},-5) --  ++(1,0) -- ++(0,-1) -- ++ (-1,0) -- cycle;
+ \draw[fill=black] ({\y},-6) --  ++(1,0) -- ++(0,-1) -- ++ (-1,0) -- cycle;
+}
+ \draw[fill=black] (9,-5) --  ++(1,0) -- ++(0,-1) -- ++ (-1,0) -- cycle;
+ \draw[fill=black] (8,-6) --  ++(1,0) -- ++(0,-1) -- ++ (-1,0) -- cycle;
+ \draw[green, line width=2] (0,-5) -- ++(8,0) -- ++(0,-2) -- ++(-8,0) -- cycle;
+
+\foreach \y in {0,1,2,3}{
+ \draw[fill=red] ({10},{-\y+3}) --  ++(2,0) -- ++(0,-1) -- ++ (-2,0) -- cycle;
+ \draw[fill=white] ({10},{-\y-1}) --  ++(2,0) -- ++(0,-1) -- ++ (-2,0) -- cycle;
+}
+
+\foreach \x in {0,1,2,3}{
+ \draw[fill=red] ({\x},-7) --  ++(1,0) -- ++(0,-2) -- ++ (-1,0) -- cycle;
+ \draw[fill=white] ({\x+4},-7) --  ++(1,0) -- ++(0,-2) -- ++ (-1,0) -- cycle;
+}
+
+\draw (0,3) -- ++(8,0) -- ++(0,-8) -- ++(-8,0) -- cycle;
+
+\draw[line width=1] (0,3) -- ++(10,0) -- ++(0,-10) -- ++(-10,0) -- cycle;
+\draw[purple, line width=2] (0,3) -- ++(8,0) -- ++(0,-8) -- ++(-8,0) -- cycle;
+\draw[black, line width=2] (8,3) -- ++(2,0) -- ++(0,-8) -- ++(-2,0) -- cycle;
+\draw[black, line width=2] (0,-5) -- ++(8,0) -- ++(0,-2) -- ++(-8,0) -- cycle;
+
+ \draw[green, line width=2] (0,-5) -- ++(8,0) -- ++(0,-2) -- ++(-8,0) -- cycle;
+\draw[cyan, line width=3] (8,3) -- ++(2,0) -- ++(0,-8) -- ++(-2,0) -- cycle;
+ \draw[orange, line width=3] (8,-5) -- ++(2,0) -- ++(0,-2) -- ++(-2,0) -- cycle;
+
+\draw[->,>=latex,green, line width=5] (9.5,-4.5) -- ++(0,-1) -- ++(-4,0);
+
+\end{tikzpicture}
+</script>
+
+
+## 組織図
+
+<script type="text/tikz">
+\begin{tikzpicture}[scale=1.2]
+\foreach \x in {0,...,3} {
+\foreach \y in {0,...,3} {
+ \draw[fill=red] ({\x},{\y}) --  ++(1,0) -- ++(0,-1) -- ++ (-1,0) -- cycle;
+ \draw[fill=white] ({\x+4},{\y-4}) --  ++(1,0) -- ++(0,-1) -- ++ (-1,0) -- cycle;
+}
+}
+\foreach \x in {0,2} {
+\foreach \y in {0,2} {
+ \draw[fill=red] ({\x+4},{\y+1}) --  ++(1,0) -- ++(0,-1) -- ++ (-1,0) -- cycle;
+ \draw[fill=red] ({\x+4+1},{\y+1-1}) --  ++(1,0) -- ++(0,-1) -- ++ (-1,0) -- cycle;
+ \draw[fill=red] ({\x+1},{\y+1-4}) --  ++(1,0) -- ++(0,-1) -- ++ (-1,0) -- cycle;
+ \draw[fill=red] ({\x},{\y+1-5}) --  ++(1,0) -- ++(0,-1) -- ++ (-1,0) -- cycle;
+}
+}
+\foreach \y in {0,2,4,6}{
+ \draw[fill=black] ({8},{\y-3}) --  ++(1,0) -- ++(0,-1) -- ++ (-1,0) -- cycle;
+ \draw[fill=black] ({9},{\y-4}) --  ++(1,0) -- ++(0,-1) -- ++ (-1,0) -- cycle;
+ \draw[fill=black] ({\y+1},-5) --  ++(1,0) -- ++(0,-1) -- ++ (-1,0) -- cycle;
+ \draw[fill=black] ({\y},-6) --  ++(1,0) -- ++(0,-1) -- ++ (-1,0) -- cycle;
+}
+ \draw[fill=black] (9,-5) --  ++(1,0) -- ++(0,-1) -- ++ (-1,0) -- cycle;
+ \draw[fill=black] (8,-6) --  ++(1,0) -- ++(0,-1) -- ++ (-1,0) -- cycle;
+
+\foreach \y in {0,1,2,3}{
+ \draw[fill=red] ({10},{-\y+3}) --  ++(2,0) -- ++(0,-1) -- ++ (-2,0) -- cycle;
+ \draw[fill=white] ({10},{-\y-1}) --  ++(2,0) -- ++(0,-1) -- ++ (-2,0) -- cycle;
+}
+
+\draw[purple, line width=2] (0,3) -- ++(8,0) -- ++(0,-8) -- ++(-8,0) -- cycle;
+\draw[black, line width=2] (8,3) -- ++(2,0) -- ++(0,-8) -- ++(-2,0) -- cycle;
+\draw[black, line width=2] (0,-5) -- ++(8,0) -- ++(0,-2) -- ++(-8,0) -- cycle;
+
+\foreach \x in {0,1,2,3}{
+ \draw[fill=red] ({\x},-7) --  ++(1,0) -- ++(0,-2) -- ++ (-1,0) -- cycle;
+ \draw[fill=white] ({\x+4},-7) --  ++(1,0) -- ++(0,-2) -- ++ (-1,0) -- cycle;
+}
+
+ \draw[green, line width=2] (0,-5) -- ++(8,0) -- ++(0,-2) -- ++(-8,0) -- cycle;
+\draw[cyan, line width=3] (8,3) -- ++(2,0) -- ++(0,-8) -- ++(-2,0) -- cycle;
+ \draw[orange, line width=3] (8,-5) -- ++(2,0) -- ++(0,-2) -- ++(-2,0) -- cycle;
+
+\draw[->,>=latex,green, line width=5] (8.5,-3.5) -- ++(0,-3) -- ++(-4,0);
+
+\end{tikzpicture}
+</script>
+
+
+
+## 例
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.js"></script>
+<script src="ori.js"></script>
+
+
