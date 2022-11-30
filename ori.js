@@ -2,24 +2,73 @@
 let A = [[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,0,0,1],[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,0,0,1]]
 let B = [[0,0,1,1],[0,1,1,0],[1,1,0,0],[1,0,0,1]]
 let C = [[1,0,0,0,1,0,0,0],[0,1,0,0,0,1,0,0],[0,0,1,0,0,0,1,0],[0,0,0,1,0,0,0,1]]
-//let C = [[0,0,0,1,0,0,0,1],[0,0,1,0,0,0,1,0],[0,1,0,0,0,1,0,0],[1,0,0,0,1,0,0,0]]
-let tate = [0,0,0,0,1,1,1,1]
-let yoko = [0,0,0,0,1,1,1,1]
-/*
-let A = [[0,1],[1,0],[0,1],[1,0]]
-let B = [[1,1],[0,1]]
-let C = [[0,1,0,1],[1,0,1,0]]
-let tate = [1,1,1,1]
-let yoko = [0,0,0,0]
-*/
-let pal = ["white","red"]
+let tateIto = [2,0,0,2,2,2,2,2,3,3,3,3,1,1,1,1,1,0,0,1,1,1,1,1,3,3,3,3,2,2,2,2,2,0,0,2,2,2,2,2,3,3,3,3,1,1,1,1,1,0,0,1,1,1,1,1,3,3,3,3,2,2,2,2,2,0,0,2,2,2,2,2,3,3,3,3,1,1,1,1,1,0,0,1,1,1,1,1,3,3,3,3,2,2,2,2,2,0,0,2,2,2,2,2,3,3,3,3,1,1,1,1,1,0,0,1,1,1,1,1,3,3,3,3,2,2,2,2]
+let yokoIto = [2,0,0,2,2,2,2,2,3,3,3,3,1,1,1,1,1,0,0,1,1,1,1,1,3,3,3,3,2,2,2,2,2,0,0,2,2,2,2,2,3,3,3,3,1,1,1,1,1,0,0,1,1,1,1,1,3,3,3,3,2,2,2,2,2,0,0,2,2,2,2,2,3,3,3,3,1,1,1,1,1,0,0,1,1,1,1,1,3,3,3,3,2,2,2,2,2,0,0,2,2,2,2,2,3,3,3,3,1,1,1,1,1,0,0,1,1,1,1,1,3,3,3,3,2,2,2,2]
+let pal = ["white","orange","blue","black"]
 let Prod
+let result = document.getElementById('result');
+
+function gA(rep,n){
+    let M = [];
+    for (let k = 0; k < rep; k++){
+	for (let i = 0; i < n; i++){
+	    let row = [];
+	    for (let j = 0; j < n; j++){
+		if (i==j){
+		    row.push(1);
+		}
+		else{
+		    row.push(0);
+		}
+	    }
+	    M.push(row);
+	}
+    }
+    return(M);
+}
+
+function gC(n,rep){
+    let M = [];
+    for (let i = 0; i < n; i++){
+	let row = [];
+	for (let j = 0; j < rep*n; j++){
+	    if (i==(j%n)){
+		row.push(1);
+	    }
+	    else{
+		row.push(0);
+	    }
+	}
+	M.push(row);
+    }
+    return(M);
+}
+
 
 function setup() {
-  createCanvas(640, 480);
+    let canvas = createCanvas(800, 800);
+    canvas.parent(result);
+    A = gA(32,4);
+    C = gC(4,32);
     Prod = mult(A,B);
     Prod = mult(Prod,C);
     console.log(Prod);
+    unit = 4;
+    for (let i in Prod){
+	for (let j in Prod[i]){
+	    if (Prod[i][j]==1){
+		fill(pal[tateIto[i]])
+	    }
+	    else{
+		fill(pal[yokoIto[j]])
+	    }
+	    rect(unit*j, unit*i, unit, unit)
+	    rect(unit*(j)+unit*8, unit*i, unit, unit)
+	    rect(unit*(j), unit*i+unit*8, unit, unit)
+	    rect(unit*(j)+unit*8, unit*i+unit*8, unit, unit)
+	}
+    }
+    
 }
 
 function mult(A, B){
@@ -39,20 +88,5 @@ function mult(A, B){
 }
 
 function draw() {
-    unit = 20;
-    for (let i in Prod){
-	for (let j in Prod[i]){
-	    if (Prod[i][j]==1){
-		fill(pal[tate[i]])
-	    }
-	    else{
-		fill(pal[yoko[j]])
-	    }
-	    rect(unit*j, unit*i, unit, unit)
-	    rect(unit*(j)+unit*8, unit*i, unit, unit)
-	    rect(unit*(j), unit*i+unit*8, unit, unit)
-	    rect(unit*(j)+unit*8, unit*i+unit*8, unit, unit)
-	}
-    }
 }
 

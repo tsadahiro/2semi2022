@@ -184,6 +184,8 @@ https://www.kyoto-art.ac.jp/t-blog/wp-content/uploads/2018/10/66e091bc2d19932de7
 
 ## 例
 
+<div id="result"></div>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.js"></script>
 <script src="ori.js"></script>
 
