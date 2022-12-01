@@ -55,10 +55,19 @@ function setup() {
     Prod = mult(A,B);
     Prod = mult(Prod,C);
     console.log(Prod);
-    unit = 8;
+    unit = 6;
     let b1 = B.length;
     let b2 = B[0].length;
     //draw B
+    translate(3*unit,3*unit);
+    for (let i in yokoIto){
+	fill(pal[yokoIto[i]]);
+	rect(unit*(-3),unit*i+unit*b1, unit*3, unit);
+    }
+    for (let j in tateIto){
+	fill(pal[tateIto[j]]);
+	rect(unit*j+unit*b2,unit*(-3), unit, unit*3);
+    }
     for (let i in B){
 	for (let j in B[0]){
 	    if (B[i][j]==1){
